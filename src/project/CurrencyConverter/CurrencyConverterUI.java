@@ -15,13 +15,13 @@ public class CurrencyConverterUI {
         System.out.println("Введите '1', если хотите задать курсы для всех валют");
         System.out.println("Введите '2', если хотите задать курс для конкретной валюты");
     }
-    public void displayRulesOfCurExchRateInput(Currency baseCurrency){
+    public void displayRulesOfCurExchRateInput(Currency[] currencies){
         System.out.println("Правило ввода курса валют");
-        System.out.println("Базовая валюта в данной программе - " + baseCurrency.getShortName() + " (" + baseCurrency.getFullName() + ")");
+        System.out.println("Базовая валюта в данной программе - " + currencies[0].getShortName() + " (" + currencies[0].getFullName() + ")");
         System.out.println("Курс базовой валюты менять нельзя");
-        System.out.println("Соответственно все курсы необходимо задать по отношению к рублю");
-        System.out.println("Например, на момент создания программы курс USD составлял 1 RUB = 0.010372 USD");
-        System.out.println("Соответственно вам необходимо было бы ввести 0,010372 чтобы установить корректный курс");
+        System.out.println("Соответственно все курсы необходимо задать по отношению к " + currencies[0].getShortName());
+        System.out.println("Например, по умолчанию курс " + currencies[1].getShortName() + " составляет " + currencies[0].getDefaultRate() + " " + currencies[0].getShortName() + " = " + currencies[1].getDefaultRate() + " " + currencies[1].getShortName());
+        System.out.println("Соответственно вам необходимо было бы ввести " + currencies[1].getDefaultRate() + " чтобы установить корректный курс");
     }
     public void displayChooseCurrMsg(){
         System.out.println("Выберите валюту и введите соотвествующую ей цифру");
@@ -35,7 +35,7 @@ public class CurrencyConverterUI {
             if (i == 0) {
                 System.out.println((i + 1) + ". " + currencies[i].getShortName() + " - " + currencies[i].getFullName() + " - Базовая валюта");
             } else {
-                System.out.println((i + 1) + ". " + currencies[i].getShortName() + " - " + currencies[i].getFullName() + ": 1 " + currencies[0].getShortName() + " = " + currencies[i].getRate() + " " + currencies[i].getShortName());
+                System.out.println((i + 1) + ". " + currencies[i].getShortName() + " - " + currencies[i].getFullName() + ": " + currencies[0].getRate() + " " + currencies[0].getShortName() + " = " + currencies[i].getRate() + " " + currencies[i].getShortName());
             }
         }
     }
@@ -56,8 +56,8 @@ public class CurrencyConverterUI {
         System.out.println("Введите сумму которую необходимо конвертировать: ");
     }
     public void displayIfWantToContinue(){
-        System.out.println("Введите 1, чтобы продолжить использование программы");
-        System.out.println("Введите 2, чтобы закрыть программу");
+        System.out.println("Введите '1', чтобы продолжить использование программы");
+        System.out.println("Введите '2', чтобы закрыть программу");
     }
     public void displayConvertedSum(String currencyRateName, double convertedSum){
         System.out.println("В результате конвертации получилось: " + convertedSum + " " + currencyRateName);

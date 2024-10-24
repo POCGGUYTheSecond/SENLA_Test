@@ -31,8 +31,8 @@ public class HangmanUI{
         System.out.println("Введите букву: ");
     }
     public void displayIfWantToContinue(){
-        System.out.println("Введите 1, если хотите попробовать ещё раз");
-        System.out.println("Введите 2, чтобы закрыть программу");
+        System.out.println("Введите '1', если хотите попробовать ещё раз");
+        System.out.println("Введите '2', чтобы закрыть программу");
     }
     public void displayHangman(int currentlives) {
         switch (currentlives) {

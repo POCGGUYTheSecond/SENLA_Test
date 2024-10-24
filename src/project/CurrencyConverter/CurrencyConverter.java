@@ -28,7 +28,7 @@ public class CurrencyConverter {
                     switch (ccInput.getUserChoiceInput(2)) {
                         case 1: // Если пользователь хочет изменить курс всех валют
                             ccUI.displayBorderBetweenMsgs();
-                            ccUI.displayRulesOfCurExchRateInput(ccLogic.getCurrencyObject(0));
+                            ccUI.displayRulesOfCurExchRateInput(ccLogic.getAllCurrencies());
                             ccUI.displayCurrencyList(ccLogic.getAllCurrencies());
                             for (int i = 1; i < ccLogic.getCurrenciesAmount(); i++) {
                                 ccUI.displaySetCurrency(ccLogic.getCurrencyShortName(i));
@@ -37,7 +37,7 @@ public class CurrencyConverter {
                             break;
                         case 2: // Если пользователь хочет изменить курс только одной валюты
                             ccUI.displayBorderBetweenMsgs();
-                            ccUI.displayRulesOfCurExchRateInput(ccLogic.getCurrencyObject(0));
+                            ccUI.displayRulesOfCurExchRateInput(ccLogic.getAllCurrencies());
                             ccUI.displayCurrencyList(ccLogic.getAllCurrencies());
                             ccUI.displayChooseCurrMsg();
                             int choice = ccInput.getUserChoiceInput(2, ccLogic.getCurrenciesAmount()) - 1;

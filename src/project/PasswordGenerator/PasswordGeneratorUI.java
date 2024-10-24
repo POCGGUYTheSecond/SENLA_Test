@@ -13,8 +13,8 @@ public class PasswordGeneratorUI{
         System.out.println("Получился следующий безопасный пароль: " + password);
     }
     public void displayIfWantToContinue(){
-        System.out.println("Введите 1, чтобы продолжить использование программы");
-        System.out.println("Введите 2, чтобы закрыть программу");
+        System.out.println("Введите '1', чтобы продолжить использование программы");
+        System.out.println("Введите '2', чтобы закрыть программу");
     }
     public void displayInputLength(){
         System.out.println("Введите желаемую длину пароля (от 8 до 12 символов): ");

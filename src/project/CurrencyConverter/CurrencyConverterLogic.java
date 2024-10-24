@@ -16,7 +16,7 @@ public class CurrencyConverterLogic {
     }
     public void setDefaultCurrency()
     {
-        for(int i = 0; i < currencies.length; i++) currencies[i].setDefaultRate();
+        for(int i = 0; i < currencies.length; i++) currencies[i].setRateToDefault();
     }
     public Currency getCurrencyObject(int choice){
         return currencies[choice];
