@@ -7,7 +7,7 @@ public class Currency {
     private double defaultRate;
 
     Currency(double defaultRate, String shortName, String fullName) {
-        rate = defaultRate;
+        this.rate = defaultRate;
         this.shortName = shortName;
         this.fullName = fullName;
         this.defaultRate = defaultRate;
