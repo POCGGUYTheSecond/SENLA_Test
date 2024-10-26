@@ -14,6 +14,6 @@ public class CurrencyConverterInput {
         return inputHandler.getUserChoiceInput(optionsBorderMin, optionsBorderMax);
     }
     public double getUserInput(){
-        return inputHandler.getUserInput();
+        return inputHandler.getUserInputDouble();
     }
 }

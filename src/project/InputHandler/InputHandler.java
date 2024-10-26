@@ -42,7 +42,7 @@ public class InputHandler {
         }
         return userChoice;
     }
-    public double getUserInput(){
+    public double getUserInputDouble(){
         double userInput = 11;
         boolean validInput = false;
 
