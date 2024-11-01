@@ -1,10 +1,12 @@
 package project.CurrencyConverter;
 
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class CurrencyConverterLogic {
     private static final int currenciesAmount = 6;
     private Currency[] currencies = new Currency[currenciesAmount];
+    DecimalFormat df = new DecimalFormat("#.##");
 
     CurrencyConverterLogic(){
         currencies[0] = new Currency(CurrencyDefaultRates.DEFAULT_RUB, "RUB", "Российский рубль"); // Первая валюта всегда должна быть базовой, а её курс равен 1.0
@@ -37,7 +39,7 @@ public class CurrencyConverterLogic {
     public String getCurrencyShortName(int choice){
         return currencies[choice].getShortName();
     }
-    public double convertSum(double fromWhichCurrRate, double toWhichCurrRate, double sumToConvert){
-        return (toWhichCurrRate / fromWhichCurrRate) * sumToConvert;
+    public String convertSum(double fromWhichCurrRate, double toWhichCurrRate, double sumToConvert){
+        return df.format((toWhichCurrRate / fromWhichCurrRate) * sumToConvert);
     }
 }

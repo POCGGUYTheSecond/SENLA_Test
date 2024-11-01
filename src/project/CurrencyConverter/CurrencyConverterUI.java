@@ -59,7 +59,7 @@ public class CurrencyConverterUI {
         System.out.println("Введите '1', чтобы продолжить использование программы");
         System.out.println("Введите '2', чтобы закрыть программу");
     }
-    public void displayConvertedSum(String currencyRateName, double convertedSum){
+    public void displayConvertedSum(String currencyRateName, String convertedSum){
         System.out.println("В результате конвертации получилось: " + convertedSum + " " + currencyRateName);
     }
 }

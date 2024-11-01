@@ -42,14 +42,15 @@ public class InputHandler {
         }
         return userChoice;
     }
-    public double getUserInputDouble(){
+    public double getUserInputPositiveDouble(){
         double userInput = 11;
         boolean validInput = false;
 
         while(!validInput) {
             try {
                 userInput = scanner.nextDouble();
-                validInput = true;
+                if(userInput > 0) validInput = true;
+                else System.out.println("Ошибка: Введите положительное число: ");
             }
             catch(Exception e) {
                 System.out.println("Ошибка: Введите корректное число: ");
